@@ -1,6 +1,6 @@
 package com.algaworks.algadelivery.delivery.tracking.domain.repository;
 
-import com.algaworks.algadelivery.delivery.tracking.ContactPoint;
+import com.algaworks.algadelivery.delivery.tracking.domain.model.ContactPoint;
 import com.algaworks.algadelivery.delivery.tracking.domain.model.Delivery;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

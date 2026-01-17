@@ -1,4 +1,4 @@
-package com.algaworks.algadelivery.delivery.tracking;
+package com.algaworks.algadelivery.delivery.tracking.domain.model;
 
 import jakarta.persistence.Embeddable;
 import lombok.*;

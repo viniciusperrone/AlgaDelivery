@@ -1,6 +1,5 @@
 package com.algaworks.algadelivery.delivery.tracking.domain.model;
 
-import com.algaworks.algadelivery.delivery.tracking.ContactPoint;
 import com.algaworks.algadelivery.delivery.tracking.domain.exceptions.DomainException;
 import org.junit.jupiter.api.Test;
 
