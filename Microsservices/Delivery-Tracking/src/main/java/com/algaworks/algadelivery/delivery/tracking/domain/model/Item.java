@@ -1,15 +1,13 @@
 package com.algaworks.algadelivery.delivery.tracking.domain.model;
 
-import lombok.AccessLevel;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.UUID;
 
 @NoArgsConstructor(access = AccessLevel.PACKAGE)
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Setter(AccessLevel.PRIVATE)
+@Getter
 public class Item {
     @EqualsAndHashCode.Include
     private UUID id;

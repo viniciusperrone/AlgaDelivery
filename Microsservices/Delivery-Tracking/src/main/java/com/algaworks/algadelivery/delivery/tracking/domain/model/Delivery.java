@@ -1,20 +1,19 @@
 package com.algaworks.algadelivery.delivery.tracking.domain.model;
 
 import com.algaworks.algadelivery.delivery.tracking.ContactPoint;
-import lombok.AccessLevel;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.math.BigDecimal;
 import java.time.OffsetDateTime;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.UUID;
 
 @NoArgsConstructor(access = AccessLevel.PACKAGE)
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Setter(AccessLevel.PRIVATE)
+@Getter
 public class Delivery {
 
     @EqualsAndHashCode.Include
@@ -50,5 +49,9 @@ public class Delivery {
         delivery.setDistanceFee(BigDecimal.ZERO);
 
         return delivery;
+    }
+
+    public List<Item> getItems() {
+        return Collections.unmodifiableList(this.items);
     }
 }
