@@ -1,5 +1,6 @@
 package com.algaworks.algadelivery.delivery.tracking.domain.model;
 
+import com.algaworks.algadelivery.delivery.tracking.ContactPoint;
 import lombok.EqualsAndHashCode;
 
 import java.math.BigDecimal;
@@ -27,6 +28,9 @@ public class Delivery {
     private BigDecimal totalCost;
 
     private Integer totalItems;
+
+    private ContactPoint sender;
+    private ContactPoint recipient;
 
     private List<Item> items = new ArrayList<>();
 }
