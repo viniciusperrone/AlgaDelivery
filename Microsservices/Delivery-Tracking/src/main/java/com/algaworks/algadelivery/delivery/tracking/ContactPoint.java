@@ -14,5 +14,4 @@ public class ContactPoint {
     private String complement;
     private String name;
     private String phone;
-    
 }
