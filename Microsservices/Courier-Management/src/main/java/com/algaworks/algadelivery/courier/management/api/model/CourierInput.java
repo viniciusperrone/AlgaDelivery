@@ -13,4 +13,5 @@ public class CourierInput {
 
     @NotBlank
     private String phone;
+
 }
