@@ -4,7 +4,6 @@ import com.algaworks.algadelivery.courier.management.domain.model.Courier;
 import com.algaworks.algadelivery.courier.management.domain.repository.CourierRepository;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
-import org.hamcrest.Matcher;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -21,7 +20,12 @@ import java.util.UUID;
 class CourierControllerTest {
 
         @LocalServerPort
-        private int port;
+        int port;
+
+        @BeforeEach
+        void setup() {
+            RestAssured.port = port;
+        }
 
         @Autowired
         private CourierRepository courierRepository;
