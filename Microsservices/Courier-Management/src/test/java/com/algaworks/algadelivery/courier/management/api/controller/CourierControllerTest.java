@@ -16,22 +16,22 @@ import javax.swing.*;
 
 import java.util.UUID;
 
+import static org.junit.jupiter.api.Assertions.*;
+
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class CourierControllerTest {
 
         @LocalServerPort
-        int port;
-
-        @BeforeEach
-        void setup() {
-            RestAssured.port = port;
-        }
+        private int port;
 
         @Autowired
         private CourierRepository courierRepository;
 
         @BeforeEach
-        void Setup(){}
+        void setup(){
+            RestAssured.port = port;
+            RestAssured.basePath = "/api/v1/couriers";
+        }
 
         @Test
         public void shouldReturn201() {

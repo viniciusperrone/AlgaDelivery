@@ -20,7 +20,7 @@ import java.math.BigDecimal;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("")
+@RequestMapping("/api/v1/couriers")
 @RequiredArgsConstructor
 public class CourierController {
 
